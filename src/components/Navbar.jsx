@@ -1,23 +1,21 @@
 import Link from "next/link";
 import React from "react";
+import MyLink from "./MyLink/MyLink";
 
 export default function Navbar() {
   const links = (
     <>
       <li>
-        <Link href={"/"}>Home</Link>
+        <MyLink href={"/"}>Home</MyLink>
       </li>
       <li>
-        <Link href={"/products"}>Product</Link>
+        <MyLink href={"/products"}>Product</MyLink>
       </li>
       <li>
-        <Link href={"/about"}>About Us</Link>
+        <MyLink href={"/about"}>About Us</MyLink>
       </li>
       <li>
-        <Link href={"/login"}>Login</Link>
-      </li>
-      <li>
-        <Link href={"/register"}>Register</Link>
+        <MyLink href={"/contact"}>Contact</MyLink>
       </li>
     </>
   );
@@ -51,13 +49,15 @@ export default function Navbar() {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="btn btn-ghost text-xl">PrimeStore</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <MyLink href={"/login"}>Login</MyLink>
+
+          <MyLink href={"/register"}>Register</MyLink>
         </div>
       </div>
     </div>
